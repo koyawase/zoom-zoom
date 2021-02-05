@@ -10438,6 +10438,14 @@
   dependencies:
     "errno" "~0.1.7"
 
+"worker-loader@^3.0.7":
+  "integrity" "sha512-LjYLuYJw6kqQKDoygpoD5vWeR1CbZjuVSW3/8pFsptMlUl8gatNM/pszhasSDAWt+dYxMipWB6695k+1zId+iQ=="
+  "resolved" "https://registry.npmjs.org/worker-loader/-/worker-loader-3.0.7.tgz"
+  "version" "3.0.7"
+  dependencies:
+    "loader-utils" "^2.0.0"
+    "schema-utils" "^3.0.0"
+
 "worker-rpc@^0.1.0":
   "resolved" "https://registry.yarnpkg.com/worker-rpc/-/worker-rpc-0.1.1.tgz"
   "version" "0.1.1"

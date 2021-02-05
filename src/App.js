@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import { LoadingSpinner, Map } from "./components";
 
+// This is to fix a known deployment issue with React. See here:
+// https://github.com/mapbox/mapbox-gl-js/issues/10173
+import mapboxgl from 'mapbox-gl';
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+
 function App() {
   const [vehicleData, setVehicleData] = useState([]);
   const [homeZones, setHomeZones] = useState([]);
