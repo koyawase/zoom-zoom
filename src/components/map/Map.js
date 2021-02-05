@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ReactMapGL from "react-map-gl";
 
-import { CustomMarker } from "../../components";
+import { CustomMarker, HomeZoneLayer } from "../../components";
 
-const Map = ({ lat, long, zoom, vehicleData }) => {
+const Map = ({ lat, long, zoom, vehicleData, homeZones }) => {
   const [viewport, setViewport] = useState({
     height: "100vh",
     width: "100wh",
@@ -17,12 +17,14 @@ const Map = ({ lat, long, zoom, vehicleData }) => {
       {...viewport}
       mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
       onViewportChange={nextViewport => setViewport(nextViewport)}
-      mapStyle='mapbox://styles/mapbox/basic-v9'
+      mapStyle="mapbox://styles/mapbox/basic-v9"
     >
       {vehicleData.map((data, i) => {
-        return <CustomMarker key={`custom-marker-${i}`} {...data}/>
+        return <CustomMarker key={`custom-marker-${i}`} {...data} />;
       })}
-      </ReactMapGL>
+
+      <HomeZoneLayer {...homeZones}/>
+    </ReactMapGL>
   );
 };
 
