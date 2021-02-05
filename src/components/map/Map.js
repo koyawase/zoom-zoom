@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactMapGL from "react-map-gl";
 
-const Map = ({ lat, long, zoom }) => {
+const Map = ({ lat, long, zoom, vehicleData }) => {
   const [viewport, setViewport] = useState({
     height: "100vh",
     width: "100wh",
