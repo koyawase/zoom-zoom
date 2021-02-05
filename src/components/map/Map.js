@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReactMapGL from "react-map-gl";
 
+import { CustomMarker } from "../../components";
+
 const Map = ({ lat, long, zoom, vehicleData }) => {
   const [viewport, setViewport] = useState({
     height: "100vh",
@@ -16,7 +18,11 @@ const Map = ({ lat, long, zoom, vehicleData }) => {
       mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
       onViewportChange={nextViewport => setViewport(nextViewport)}
       mapStyle='mapbox://styles/mapbox/basic-v9'
-    />
+    >
+      {vehicleData.map((data, i) => {
+        return <CustomMarker key={`custom-marker-${i}`} {...data}/>
+      })}
+      </ReactMapGL>
   );
 };
 
