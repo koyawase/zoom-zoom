@@ -23,7 +23,7 @@ const Map = ({ lat, long, zoom, vehicleData, homeZones }) => {
   return (
     <ReactMapGL
       {...viewport}
-      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
+      mapboxApiAccessToken={"pk.eyJ1Ijoia295YXdhc2UiLCJhIjoiY2trcTVycWd6MzF3dzJ1bGFjd3Nhb2NvZyJ9.LfQ02Q86X6jWR-S3kc1j2g"}
       onViewportChange={nextViewport => setViewport(nextViewport)}
       mapStyle="mapbox://styles/mapbox/basic-v9"
     >
