@@ -1,25 +1,28 @@
 {
   "files": {
-    "main.css": "/zoom-zoom/static/css/main.a7a31806.chunk.css",
-    "main.js": "/zoom-zoom/static/js/main.4aae86c5.chunk.js",
-    "main.js.map": "/zoom-zoom/static/js/main.4aae86c5.chunk.js.map",
-    "runtime-main.js": "/zoom-zoom/static/js/runtime-main.a463c8dc.js",
-    "runtime-main.js.map": "/zoom-zoom/static/js/runtime-main.a463c8dc.js.map",
-    "static/js/2.47b658f5.chunk.js": "/zoom-zoom/static/js/2.47b658f5.chunk.js",
-    "static/js/2.47b658f5.chunk.js.map": "/zoom-zoom/static/js/2.47b658f5.chunk.js.map",
-    "static/js/3.6987f601.chunk.js": "/zoom-zoom/static/js/3.6987f601.chunk.js",
-    "static/js/3.6987f601.chunk.js.map": "/zoom-zoom/static/js/3.6987f601.chunk.js.map",
+    "main.css": "/zoom-zoom/static/css/main.89dd3855.chunk.css",
+    "main.js": "/zoom-zoom/static/js/main.77530514.chunk.js",
+    "main.js.map": "/zoom-zoom/static/js/main.77530514.chunk.js.map",
+    "runtime-main.js": "/zoom-zoom/static/js/runtime-main.9235bff2.js",
+    "runtime-main.js.map": "/zoom-zoom/static/js/runtime-main.9235bff2.js.map",
+    "static/css/2.bdb85385.chunk.css": "/zoom-zoom/static/css/2.bdb85385.chunk.css",
+    "static/js/2.50d4cdf7.chunk.js": "/zoom-zoom/static/js/2.50d4cdf7.chunk.js",
+    "static/js/2.50d4cdf7.chunk.js.map": "/zoom-zoom/static/js/2.50d4cdf7.chunk.js.map",
+    "static/js/3.3a9c2406.chunk.js": "/zoom-zoom/static/js/3.3a9c2406.chunk.js",
+    "static/js/3.3a9c2406.chunk.js.map": "/zoom-zoom/static/js/3.3a9c2406.chunk.js.map",
     "index.html": "/zoom-zoom/index.html",
-    "static/css/main.a7a31806.chunk.css.map": "/zoom-zoom/static/css/main.a7a31806.chunk.css.map",
-    "static/js/2.47b658f5.chunk.js.LICENSE.txt": "/zoom-zoom/static/js/2.47b658f5.chunk.js.LICENSE.txt",
+    "static/css/2.bdb85385.chunk.css.map": "/zoom-zoom/static/css/2.bdb85385.chunk.css.map",
+    "static/css/main.89dd3855.chunk.css.map": "/zoom-zoom/static/css/main.89dd3855.chunk.css.map",
+    "static/js/2.50d4cdf7.chunk.js.LICENSE.txt": "/zoom-zoom/static/js/2.50d4cdf7.chunk.js.LICENSE.txt",
     "static/js/mapbox-gl-csp-worker.14bfcda0.worker.js": "/zoom-zoom/static/js/mapbox-gl-csp-worker.14bfcda0.worker.js",
     "static/js/mapbox-gl-csp-worker.14bfcda0.worker.js.map": "/zoom-zoom/static/js/mapbox-gl-csp-worker.14bfcda0.worker.js.map",
     "static/media/loading-spinner.9dd8c81d.gif": "/zoom-zoom/static/media/loading-spinner.9dd8c81d.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.a463c8dc.js",
-    "static/js/2.47b658f5.chunk.js",
-    "static/css/main.a7a31806.chunk.css",
-    "static/js/main.4aae86c5.chunk.js"
+    "static/js/runtime-main.9235bff2.js",
+    "static/css/2.bdb85385.chunk.css",
+    "static/js/2.50d4cdf7.chunk.js",
+    "static/css/main.89dd3855.chunk.css",
+    "static/js/main.77530514.chunk.js"
   ]
 }
