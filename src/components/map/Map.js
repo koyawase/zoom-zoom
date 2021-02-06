@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReactMapGL, {GeolocateControl} from "react-map-gl";
+import ReactMapGL, { GeolocateControl } from "react-map-gl";
 
 import { CustomMarker, HomeZoneLayer } from "../../components";
 
@@ -14,35 +14,35 @@ const Map = ({ lat, long, zoom, vehicleData, homeZones }) => {
 
   const [userLocation, setUserLocation] = useState({});
 
-  const geolocateControlStyle= {
+  const geolocateControlStyle = {
     right: 10,
     top: 10
   };
 
-
   return (
     <ReactMapGL
       {...viewport}
-      mapboxApiAccessToken={"pk.eyJ1Ijoia295YXdhc2UiLCJhIjoiY2trcTVycWd6MzF3dzJ1bGFjd3Nhb2NvZyJ9.LfQ02Q86X6jWR-S3kc1j2g"}
+      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKENS}
       onViewportChange={nextViewport => setViewport(nextViewport)}
       mapStyle="mapbox://styles/mapbox/basic-v9"
     >
-      
-      <h2>Latitude {userLocation.lat}</h2>
-      <h2>Longitude {userLocation.long}</h2>
-
       {vehicleData.map((data, i) => {
         return <CustomMarker key={`custom-marker-${i}`} {...data} />;
       })}
 
-      <HomeZoneLayer {...homeZones}/>
+      <HomeZoneLayer {...homeZones} />
 
       <GeolocateControl
         style={geolocateControlStyle}
-        positionOptions={{enableHighAccuracy: true}}
+        positionOptions={{ enableHighAccuracy: true }}
         trackUserLocation={true}
         showAccuracyCircle={false}
-        onGeolocate={(geoLocation) => setUserLocation({"lat": geoLocation.coords.latitude, "long": geoLocation.coords.longitude})}
+        onGeolocate={geoLocation =>
+          setUserLocation({
+            lat: geoLocation.coords.latitude,
+            long: geoLocation.coords.longitude
+          })
+        }
         auto
       />
     </ReactMapGL>
