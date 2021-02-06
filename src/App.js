@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { LoadingSpinner, Map } from "./components";
+import 'mapbox-gl/dist/mapbox-gl.css'
 
 // This is to fix a known deployment issue with React. See here:
 // https://github.com/mapbox/mapbox-gl-js/issues/10173

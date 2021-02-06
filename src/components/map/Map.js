@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactMapGL, { GeolocateControl } from "react-map-gl";
 
-import { CustomMarker, HomeZoneLayer } from "../../components";
+import { CustomMarker, HomeZoneLayer, MevoRoute } from "../../components";
 
 const Map = ({ lat, long, zoom, vehicleData, homeZones }) => {
   const [viewport, setViewport] = useState({
@@ -13,6 +13,7 @@ const Map = ({ lat, long, zoom, vehicleData, homeZones }) => {
   });
 
   const [userLocation, setUserLocation] = useState({});
+  const [requestedRoute, setRequestedRoute] = useState(false);
 
   const geolocateControlStyle = {
     right: 10,
@@ -45,6 +46,17 @@ const Map = ({ lat, long, zoom, vehicleData, homeZones }) => {
         }
         auto
       />
+
+      {requestedRoute ? (
+        <MevoRoute userLocation={userLocation} vehicleData={vehicleData} />
+      ) : null}
+
+      <button
+        className="find-mevo-button"
+        onClick={() => setRequestedRoute(!requestedRoute)}
+      >
+        {requestedRoute ? "Cancel Find" : "Find Nearest Mevo"}
+      </button>
     </ReactMapGL>
   );
 };
