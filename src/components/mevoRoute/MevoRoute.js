@@ -26,7 +26,7 @@ const MevoRoute = ({ vehicleData, userLocation }) => {
         }
       });
       fetch(
-        `https://api.mapbox.com/directions/v5/mapbox/driving/${userLocation.long},${userLocation.lat};${nearestMevo.long},${nearestMevo.lat}?geometries=geojson&access_token=${process.env.REACT_APP_MAPBOX_ACCESS_TOKENS}`
+        `https://api.mapbox.com/directions/v5/mapbox/walking/${userLocation.long},${userLocation.lat};${nearestMevo.long},${nearestMevo.lat}?geometries=geojson&access_token=${process.env.REACT_APP_MAPBOX_ACCESS_TOKENS}`
       )
         .then(response => response.json())
         .then(data => setRoute(data.routes[0].geometry));
