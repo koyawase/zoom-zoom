@@ -78,6 +78,7 @@ const Map = ({ lat, long, zoom, vehicleData, homeZones }) => {
   );
 };
 
+// Load map in Wellington Central Coordinates by default if user doesn't have location enabled
 Map.defaultProps = {
   lat: -41.2924,
   long: 174.778,
