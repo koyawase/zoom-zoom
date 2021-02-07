@@ -3,6 +3,8 @@ import ReactMapGL, { GeolocateControl } from "react-map-gl";
 
 import { CustomMarker, HomeZoneLayer, MevoRoute } from "../../components";
 
+import "./Map.css";
+
 const Map = ({ lat, long, zoom, vehicleData, homeZones }) => {
   const [viewport, setViewport] = useState({
     height: "100vh",
@@ -53,12 +55,25 @@ const Map = ({ lat, long, zoom, vehicleData, homeZones }) => {
         <MevoRoute userLocation={userLocation} vehicleData={vehicleData} />
       ) : null}
 
-      <button
-        className="find-mevo-button"
-        onClick={() => setRequestedRoute(!requestedRoute)}
-      >
-        {requestedRoute ? "Cancel Find" : "Find Nearest Mevo"}
-      </button>
+      {Object.keys(userLocation).length === 0 ? (
+        <button
+          className="btn-secondary btn-bottom"
+          onClick={() =>
+            alert(
+              "Please enable and allow location tracking to use this feature"
+            )
+          }
+        >
+          Find Nearest Mevo
+        </button>
+      ) : (
+        <button
+          className="btn-primary btn-bottom"
+          onClick={() => setRequestedRoute(!requestedRoute)}
+        >
+          {requestedRoute ? "Cancel Find" : "Find Nearest Mevo"}
+        </button>
+      )}
     </ReactMapGL>
   );
 };
