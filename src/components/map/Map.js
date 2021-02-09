@@ -51,9 +51,9 @@ const Map = ({ lat, long, zoom, vehicleData, homeZones }) => {
         auto
       />
 
-      {requestedRoute ? (
+      {requestedRoute && (
         <MevoRoute userLocation={userLocation} vehicleData={vehicleData} />
-      ) : null}
+      )}
 
       {Object.keys(userLocation).length === 0 ? (
         <button
