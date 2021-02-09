@@ -57,7 +57,7 @@ const Map = ({ lat, long, zoom, vehicleData, homeZones }) => {
 
       {Object.keys(userLocation).length === 0 ? (
         <button
-          className="btn-secondary btn-bottom"
+          className="map-btn-secondary map-btn-bottom"
           onClick={() =>
             alert(
               "Please enable and allow location tracking to use this feature"
@@ -68,7 +68,7 @@ const Map = ({ lat, long, zoom, vehicleData, homeZones }) => {
         </button>
       ) : (
         <button
-          className="btn-primary btn-bottom"
+          className="map-btn-primary map-btn-bottom"
           onClick={() => setRequestedRoute(!requestedRoute)}
         >
           {requestedRoute ? "Cancel Find" : "Find Nearest Mevo"}

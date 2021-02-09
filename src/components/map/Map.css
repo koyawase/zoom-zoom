@@ -1,4 +1,4 @@
-.btn-primary {
+.map-btn-primary {
   background-color: #f7590d;
   border: none;
   color: white;
@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.btn-secondary {
+.map-btn-secondary {
   background-color: white;
   color: black;
   border: 2px solid #f7590d;
@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-.btn-bottom {
+.map-btn-bottom {
   position: absolute;
   margin-left: -50px;
   left: 50%;
