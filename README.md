@@ -1,5 +1,7 @@
 # Zoom Zoom
 
+Simple front-end project using React to display Mevo car locations on a map using the Mevo developer API.
+
 If you would like to run this project locally, you will need to to the following steps:
 
 1. Create `.env` file in the root directory of this project.
